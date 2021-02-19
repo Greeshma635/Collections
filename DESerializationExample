@@ -1,0 +1,16 @@
+namespace ConsoleApp4
+{
+    class Class6
+    {
+        static void Main(string[] args)
+        {
+            FileStream sw = new FileStream("Raj.txt", FileMode.OpenOrCreate);
+            IFormatter formatter = new BinaryFormatter();
+            Doctorr dr1 = (Doctorr)formatter.Deserialize(sw);
+            Console.WriteLine(dr1.Did);
+            Console.WriteLine(dr1.DName);
+
+
+        }
+    }
+}
