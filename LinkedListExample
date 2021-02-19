@@ -1,0 +1,34 @@
+namespace ConsoleApp4
+{
+    class LinkedListExample
+    {
+        static void Main(string[] args)
+        {
+            LinkedList<int> li = new LinkedList<int>();
+            HashSet<int> hs = new HashSet<int>();
+            hs.Add(7638);
+            hs.Add(7638);
+            foreach (object i in hs)
+            {
+                Console.WriteLine(i);
+            }
+            li.Distinct<int>();
+            li.Remove(546);
+            li.AddFirst(45);
+            LinkedListNode<int> node = li.Find(45);
+            li.AddAfter(node, 77);
+            li.AddBefore(node, 89);
+            li.AddLast(678);
+            li.AddLast(7898);
+            li.AddLast(67845);
+            li.AddFirst(8740);
+            foreach (object i in li)
+            {
+                Console.WriteLine(i);
+            }
+
+
+        }
+
+    }
+}
