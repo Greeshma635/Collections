@@ -1,0 +1,21 @@
+namespace ConsoleApp4
+{
+    [Serializable]
+    class SerializationExample
+    {
+        public const string Path = @"D:/Greeshma.txt";
+        public int Id;
+        public string Name;
+        static void Main(string[] args)
+        {
+            SerializationExample se = new SerializationExample();
+            se.Id = 111;
+            se.Name = "Harsha";
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(Path, FileMode.OpenOrCreate, FileAccess.Write);
+            formatter.Serialize(stream, se);
+            stream.Close();
+          
+        }
+    }
+}
